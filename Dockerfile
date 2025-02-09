@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     qemu-user \
     qemu-system-riscv64 \
     make \
+    build-essential \
     cmake 
 
 RUN apt-get install -y bsdextrautils \
@@ -20,7 +21,7 @@ RUN apt-get install -y bsdextrautils \
     binutils \
     vim \
     less \
-    vim htop git net-tools binutils 
+    vim htop git net-tools binutils psmisc 
 
 RUN   rm -rf /var/lib/apt/lists/* \
     && apt-get clean
