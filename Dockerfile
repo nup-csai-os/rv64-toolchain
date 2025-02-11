@@ -21,7 +21,7 @@ RUN apt-get install -y bsdextrautils \
     binutils \
     vim \
     less \
-    vim htop git net-tools binutils psmisc 
+    vim htop git net-tools binutils psmisc tmux 
 
 RUN   rm -rf /var/lib/apt/lists/* \
     && apt-get clean

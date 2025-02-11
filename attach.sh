@@ -1,7 +1,6 @@
 #!/bin/bash
 
-CONTAINER_NAME="rv64_devenv"
-IMAGE_NAME="krinkin/rv64-toolchain"
+source ./env.sh
 
 echo "Search: $(docker ps -a -q -f name=^/${CONTAINER_NAME}$)"
 
