@@ -5,8 +5,6 @@ This project provides a containerized development environment for RISC-V develop
 ## Prerequisites
 
 - Docker installed and running on your system
-- Basic understanding of Docker commands
-- Bash shell environment
 
 ## Quick Start
 
