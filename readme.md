@@ -21,15 +21,15 @@ cd rv64-toolchain
 git clone git@github.com:nup-csai-os/xv6-riscv.git
 ```
 - {HOST} Build the local Docker image (optional, you can get it from hub.docker.com):
-   ```bash
+```bash
    ./build_local_image.sh
    ```
 - {HOST} Start the development environment:
-   ```bash
+```bash
    ./attach.sh
    ```
 - [RV64@ debug 1st terminal] Build xv6 and launch it for debug
-   ```bash
+```bash
    cd xv6-riscv
    make qemu-gdb
    ```
@@ -38,7 +38,7 @@ git clone git@github.com:nup-csai-os/xv6-riscv.git
 ./newterm.sh
 ```
 - [RV64@ debug 2nd terminal] run kernel with gdb
-   ```bash
+```bash
    cd xv6-riscv 
    gdb-multiarch kernel/kernel
    
@@ -52,9 +52,9 @@ Thread 2 hit Breakpoint 1, 0x0000000080000000 in _entry ()
 (gdb)
 ```
 
-If you see previous message, everything set up
+If you see the previous message, everything is set up
 
-To stop running OS press Ctrl-A X
+To stop running OS, press Ctrl-A X
 
 Screencast: 
 
