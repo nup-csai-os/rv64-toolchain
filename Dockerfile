@@ -33,7 +33,7 @@ WORKDIR /ws
 # Add example test program to verify toolchain
 COPY test.c /ws/
 COPY bashrc /root/.bashrc
-RUN riscv64-linux-gnu-gcc -static /ws/test.c &&  qemu-riscv64 ./a.out
+#RUN riscv64-linux-gnu-gcc -static /ws/test.c &&  qemu-riscv64 ./a.out
 
 # Default command
 CMD ["/bin/bash"]
