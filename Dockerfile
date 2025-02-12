@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gdb-multiarch \
     qemu-user \
     qemu-system-riscv64 \
+    gdb-multiarch \
     make \
     build-essential \
     cmake 

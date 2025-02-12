@@ -10,19 +10,58 @@ This project provides a containerized development environment for RISC-V develop
 
 ## Quick Start
 
-1. Clone this repository
-2. Build the local Docker image (optional, if you want to customize the environment):
+
+- {HOST} Clone this repository
+```
+git clone git@github.com:krinkin/rv64-toolchain.git
+```
+- {HOST} Clone xv6 vanilla repository
+```
+cd rv64-toolchain
+git clone git@github.com:nup-csai-os/xv6-riscv.git
+```
+- {HOST} Build the local Docker image (optional, you can get it from hub.docker.com):
    ```bash
    ./build_local_image.sh
    ```
-3. Start the development environment:
+- {HOST} Start the development environment:
    ```bash
    ./attach.sh
    ```
+- [RV64@ debug 1st terminal] Build xv6 and launch it for debug
+   ```bash
+   cd xv6-riscv
+   make qemu-gdb
+   ```
+- {HOST} Create one more terminal and enter into container
+```
+./newterm.sh
+```
+- [RV64@ debug 2nd terminal] run kernel with gdb
+   ```bash
+   cd xv6-riscv 
+   gdb-multiarch kernel/kernel
+   
+   (gdb) target remote localhost:25000
+   b *0x80000000
+   c
+```
+It should be stopped with
+```
+Thread 2 hit Breakpoint 1, 0x0000000080000000 in _entry ()
+(gdb)
+```
+
+If you see previous message, everything set up
+
+To stop running OS press Ctrl-A X
+
+Screencast: 
 
 ## Available Scripts
 
 ### `attach.sh`
+
 Main script to manage the development container. It will:
 - Create and start a new container if none exists
 - Start an existing container if it's stopped
@@ -46,18 +85,4 @@ Builds the local Docker image with the RISC-V toolchain and development tools. T
 Contains environment variables used by all scripts:
 - `CONTAINER_NAME`: Name of the development container (default: "rv64_devenv")
 - `IMAGE_NAME`: Docker image name (default: "krinkin/rv64-toolchain:latest")
-
-## Container Management
-
-The environment uses consistent container naming to ensure all scripts work together:
-- Container name is fixed to "rv64_devenv"
-- Working directory is mounted as `/ws`
-- Container hostname is set to "debug"
-
-## Best Practices
-
-1. Use `attach.sh` for your primary development session
-2. Use `newterm.sh` when you need additional terminals
-3. Keep your work in the mounted volume (`/ws`) to persist changes
-4. Use `purge_containers.sh` if you need to reset the environment
 
