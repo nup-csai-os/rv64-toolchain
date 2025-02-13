@@ -84,3 +84,5 @@ Contains environment variables used by all scripts:
 - `CONTAINER_NAME`: Name of the development container (default: "rv64_devenv")
 - `IMAGE_NAME`: Docker image name (default: "krinkin/rv64-toolchain:latest")
 
+## Refs
+- [XV6 RICS-V Textbook](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf)
