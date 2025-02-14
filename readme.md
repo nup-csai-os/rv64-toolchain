@@ -19,7 +19,7 @@ cd rv64-toolchain
 git clone git@github.com:nup-csai-os/xv6-riscv.git
 ```
 - {HOST} Build the local Docker image (optional, you can get it from hub.docker.com):
-```bash
+  ```bash
    ./build_local_image.sh
    ```
 - {HOST} Start the development environment:
