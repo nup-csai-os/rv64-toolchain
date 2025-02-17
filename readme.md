@@ -16,7 +16,7 @@ git clone git@github.com:krinkin/rv64-toolchain.git
 - {HOST} Clone xv6 vanilla repository
 ```
 cd rv64-toolchain
-git clone git@github.com:nup-csai-os/xv6-riscv.git
+git clone git@github.com:nup-csai-os/os2025.git
 ```
 - {HOST} Build the local Docker image (optional, you can get it from hub.docker.com):
   ```bash
@@ -28,7 +28,7 @@ git clone git@github.com:nup-csai-os/xv6-riscv.git
    ```
 - [RV64@ debug 1st terminal] Build xv6 and launch it for debug
 ```bash
-   cd xv6-riscv
+   cd os2025
    make qemu-gdb
    ```
 - {HOST} Create one more terminal and enter into container
@@ -37,7 +37,7 @@ git clone git@github.com:nup-csai-os/xv6-riscv.git
 ```
 - [RV64@ debug 2nd terminal] run kernel with gdb
 ```bash
-   cd xv6-riscv 
+   cd os2025 
    gdb-multiarch kernel/kernel
    
    (gdb) target remote localhost:25000
