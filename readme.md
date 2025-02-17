@@ -86,3 +86,4 @@ Contains environment variables used by all scripts:
 
 ## Refs
 - [XV6 RICS-V Textbook](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf)
+- [Video course](https://www.youtube.com/watch?v=fWUJKH0RNFE&list=PLbtzT1TYeoMhTPzyTZboW_j7TPAnjv9XB)
