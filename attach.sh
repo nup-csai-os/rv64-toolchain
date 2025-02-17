@@ -22,7 +22,8 @@ else
     echo "Creating and running new container..."
     docker run -it \
         --name "${CONTAINER_NAME}" \
-        -v "$(pwd)":/ws \
+       -v "$(pwd)":/ws \
+        -p 25000:25000 \
         --hostname "debug" \
         "${IMAGE_NAME}"
 fi
