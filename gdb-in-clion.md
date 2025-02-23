@@ -1,3 +1,6 @@
+## [Watch Video on GitHub](https://github.com/krinkin/rv64-toolchain/pull/1)
+
+### Or follow steps: 
 1) Open [devcontainer.json](devcontainer.json) 
 2) Click dev container icon
 ![Start-dev-container.png](docs/images/Start-dev-container.png)
