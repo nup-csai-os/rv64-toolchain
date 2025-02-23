@@ -1,0 +1,11 @@
+{
+  "name": "os-dev",
+//  "image": "krinkin/rv64-toolchain:latest",
+  "dockerFile": "./Dockerfile",
+  "workspaceFolder": "/ws/os2025",
+  "customizations": {
+    "jetbrains": {
+      "backend": "CLion"
+    },
+  }
+}
