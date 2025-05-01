@@ -25,5 +25,8 @@ else
        -v "$(pwd)":/ws \
         -p 25000:25000 \
         --hostname "debug" \
+        --net=host \
+        --cap-add=NET_ADMIN \
+        --device=/dev/net/tun \
         "${IMAGE_NAME}"
 fi

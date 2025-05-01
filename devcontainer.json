@@ -1,11 +1,19 @@
 {
   "name": "os-dev",
-//  "image": "krinkin/rv64-toolchain:latest",
-  "dockerFile": "./Dockerfile",
+  "image": "krinkin/rv64-toolchain:latest",
+//  "dockerFile": "./Dockerfile",
   "workspaceFolder": "/ws/os2025",
   "customizations": {
     "jetbrains": {
       "backend": "CLion"
-    },
-  }
+    }
+  },
+  "runArgs": [
+    "--cap-add=NET_ADMIN",
+    "--device=/dev/net/tun",
+    "--network=none"
+  ],
+  "mounts": [
+    "source=/dev/net/tun,target=/dev/net/tun,type=bind"
+  ]
 }

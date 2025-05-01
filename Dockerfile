@@ -22,7 +22,9 @@ RUN apt-get install -y bsdextrautils \
     binutils \
     vim \
     less \
-    vim htop git net-tools binutils psmisc tmux 
+    vim htop git net-tools binutils psmisc tmux
+
+RUN apt-get update && apt-get install -y --no-install-recommends tcpdump iproute2 iputils-ping
 
 RUN   rm -rf /var/lib/apt/lists/* \
     && apt-get clean
