@@ -18,11 +18,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     cmake 
 
 RUN apt-get install -y bsdextrautils \
+    bc \
     file \
     binutils \
     vim \
     less \
-    vim htop git net-tools binutils psmisc tmux 
+    htop git net-tools psmisc tmux
 
 RUN   rm -rf /var/lib/apt/lists/* \
     && apt-get clean
